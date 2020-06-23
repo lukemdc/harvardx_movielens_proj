@@ -303,8 +303,8 @@ test_rmse_table[nrow(test_rmse_table)+1,]<-
 validation_results[["y_hat_weighted_guesses"]]<-
   sample(poss_ratings, nrow(validation), replace = T, prob=c(probs$prob_per_rating))
 
-validation_rmse_table[nrow(validation_rmse_table)+1,]<
-  -c("weighted_guesses",
+validation_rmse_table[nrow(validation_rmse_table)+1,]<-
+  c("weighted_guesses",
      RMSE(validation_results$y_hat_weighted_guesses, validation_results$rating))
 ```
 
